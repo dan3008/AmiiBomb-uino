@@ -2,31 +2,16 @@
 
 AmiiBomb is Windows tools, with cheap component used, for create Amiibo Tag (NTAG215) and much more...
 
+This is a fork of the origional by AcK77 (https://github.com/AcK77/AmiiBomb-uino) with the express purpose of adding support for the PN532 shield. Origional RC522 files kept in for reference
+
 ## What's you need?
 
 - *1x* Windows PC
 - *1x* Arduino Uno R3 *(around $4)*
 - *1x* USB Cable Type AB *(pretty sure you already have it)*
-- *1x* RFID Module RC522 *(around $2)*
+- *1x* RFID shield PN532 *(around $10-$15)*
 - *7x* Pin Wire Male-Female *(around $1 for x20)*
-- *1x* Soldering Iron Kit *(and a little soldering skills)*
 - Many NTAG215 as you want Amiibo Tag *(around $34 for x100)*
-
-## What you have to do?
-
-You have to solder the pins on the RC522 Module and connect them following this schematics. Connect the Arduino Uno (or Nano) to the PC by USB and That's all! (Guys with soldering skills already know that but I prefer explain for anyone!)
-
-![Arduino / RC255 PinOut](http://i66.tinypic.com/2ng8zv9.jpg)
-
-Signal    | RC522 Pin | Arduino Pin
---------- | --------- | -----------
-RST/Reset | RST       | 9
-SPI SS    | SDA(SS)   | 10
-SPI MOSI  | MOSI      | 11 / ICSP-4 
-SPI MISO  | MISO      | 12 / ICSP-1 
-SPI SCK   | SCK       | 13 / ICSP-3 
-VCC       | 3.3V      | 3.3V
-GND       | GND       | GND
 
 ## And when the hardware is ready?
 
@@ -73,7 +58,6 @@ Just an Arduino program who communicate with AmiiBomb, You can flash it through 
 - Clean the code.
 - It's work really fine with an NTAG215 but I don't know if it's work with an Amiibo ^^'!
 - AppData editor (for SSB Amiibo or any others who have interesting things inside).
-- Support PN532 NFC Module in AmiiBombuino.
 - Improve the docs.
 
 In a future, I would own an N2 and a PowerSaves to add many functionality as possible in AmiiBomb. If you have any kind of ideas or suggestions, just let me know :)! You feel free to donate me at paypal adress: ackeedy@gmail.com
